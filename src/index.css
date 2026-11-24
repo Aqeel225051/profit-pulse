@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Malayalam:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Prevent zoom on input focus for mobile safari and chrome */
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+
+  body {
+    @apply antialiased bg-slate-100 text-slate-900 transition-colors duration-200;
+  }
+
+  /* Dark mode root styles */
+  .dark body {
+    @apply bg-slate-950 text-slate-100;
+  }
+}
+
+/* Large-text accessibility mode */
+.large-text {
+  font-size: 1.15rem;
+}
+.large-text button {
+  min-height: 3rem;
+  font-size: 1.1rem;
+}
+.large-text p, .large-text span {
+  font-size: 1.1em;
+}
+.large-text h1 {
+  font-size: 1.75rem;
+}
+.large-text h2 {
+  font-size: 1.5rem;
+}
+
+/* Custom scrollbar for mobile lists */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
